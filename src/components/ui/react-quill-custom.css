@@ -1,0 +1,97 @@
+/* React Quill Custom Styles */
+.ql-toolbar.ql-snow {
+  border-top: 1px solid hsl(var(--border));
+  border-left: 1px solid hsl(var(--border));
+  border-right: 1px solid hsl(var(--border)); 
+  border-bottom: none;
+  background-color: hsl(var(--background));
+  border-top-left-radius: calc(var(--radius) - 2px);
+  border-top-right-radius: calc(var(--radius) - 2px);
+}
+
+.ql-container.ql-snow {
+  border-bottom: 1px solid hsl(var(--border));
+  border-left: 1px solid hsl(var(--border));
+  border-right: 1px solid hsl(var(--border));
+  border-top: none;
+  border-bottom-left-radius: calc(var(--radius) - 2px);
+  border-bottom-right-radius: calc(var(--radius) - 2px);
+  font-family: inherit;
+}
+
+.ql-editor {
+  color: hsl(var(--foreground));
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 350px;
+}
+
+.ql-editor.ql-blank::before {
+  color: hsl(var(--muted-foreground));
+  font-style: normal;
+  font-size: 14px;
+}
+
+.ql-snow .ql-tooltip {
+  background-color: hsl(var(--popover));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--popover-foreground));
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: var(--radius);
+}
+
+.ql-snow .ql-tooltip input[type=text] {
+  background-color: hsl(var(--background));
+  border: 1px solid hsl(var(--border));
+  color: hsl(var(--foreground));
+  border-radius: calc(var(--radius) - 2px);
+  padding: 4px 8px;
+}
+
+.ql-snow .ql-picker-options {
+  background-color: hsl(var(--popover));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: var(--radius);
+}
+
+.ql-snow .ql-picker-item:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+
+.ql-snow .ql-stroke {
+  stroke: hsl(var(--foreground));
+}
+
+.ql-snow .ql-fill {
+  fill: hsl(var(--foreground));
+}
+
+.ql-toolbar.ql-snow .ql-formats {
+  margin-right: 15px;
+}
+
+.ql-toolbar.ql-snow button:hover,
+.ql-toolbar.ql-snow button:focus {
+  color: hsl(var(--primary));
+}
+
+.ql-toolbar.ql-snow button.ql-active {
+  color: hsl(var(--primary));
+}
+
+.ql-snow a {
+  color: hsl(var(--primary));
+}
+
+/* Dark mode specific adjustments */
+@media (prefers-color-scheme: dark) {
+  .ql-snow .ql-tooltip {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  }
+  
+  .ql-snow .ql-picker-options {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+  }
+}

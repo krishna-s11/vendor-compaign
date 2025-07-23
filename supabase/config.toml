@@ -1,0 +1,13 @@
+project_id = "ngowayhnjjrzrjfwhdbw"
+
+[functions.execute-campaign]
+verify_jwt = true
+
+[functions.execute-campaign-chunk]
+verify_jwt = true
+
+[functions.send-campaign-email]
+verify_jwt = false
+
+[functions.send-campaign-whatsapp]
+verify_jwt = false
